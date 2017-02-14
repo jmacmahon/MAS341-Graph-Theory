@@ -13,12 +13,11 @@ This is the course website for MAS341: Graph Theory at the University of Sheffie
 
 <h3> Recent Lectures: </h3>
 <ul>
-{% assign lectures = site.lecturenotes | reverse %}
-{% for lecture in lectures limit:2 %}
+{% for lecture in site.lecturenotes %}
 <li>
-<a href="{{ lecture.url | prepend:site.baseurl }}"> {{ lecture.title }} </a>  
+<a href="{{ lecture.url | prepend:site.baseurl }}"> {{ lecture.title }} </a>
 </li>
-{% endfor %} 
+{% endfor %}
 </ul>
 
 </div>
